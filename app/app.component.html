@@ -1,0 +1,57 @@
+
+<div class="container">
+      <div class="jumbotron" style="text-align:center">
+        <h1>Welcome to the Angular Demo Site</h1>
+        
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading">Status</div>
+        <div class="panel-body">
+            <p>You are in app.component.html<p>
+          <h3>{{title}}</h3>
+        </div>
+      </div>
+</div>
+<hr>
+
+<div class="container">
+        <h2 style="text-align:center">App inside an App</h2>
+    <div class="row">
+        <div class="col-12 col-sm-6 col-md-8"> 1.
+            <app-warningalert> </app-warningalert>
+        </div>
+        <div class="col-6 col-md-4"> 2.
+            <app-successalert> </app-successalert>
+        </div>
+    </div>
+</div>
+
+
+<hr>
+<h3>Data Binding</h3>
+<h4>1. String Interpolation</h4>
+<p> <b>Some Dynamic messsage from app.component.ts: </b> "{{somevariable}}"</p>
+<p>The registered name is:<b> {{name}}</b> </p>
+<p> </p>
+<h4>2.Property Binding</h4>
+<!-- <h1[textContent]="'Selected Button' + person.name"></h1>
+<button class="btn btn-primary" (click) = "selected_button = 1">Button 1</button>
+<button class="btn btn-primary" (click) = "selected_button = 2">Button 2</button> -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      
+      <input type="text" class="form-control" [(ngModel)] = "username">
+      <p><b>You entered: {{ username }}</b></p>
+      <button class="btn btn-primary" [disabled]="username === ''" (click) ="username = ''">Reset User</button>
+
+      
+    </div>
+  </div>
+</div> 
+<!-- 
+<h4> Experiments with $event</h4>
+<input type="text" class = "form-control" (input) = "onUpdate($event)" id=""> -->
+<app-level1></app-level1>
+
